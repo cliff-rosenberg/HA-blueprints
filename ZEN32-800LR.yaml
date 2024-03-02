@@ -244,7 +244,7 @@ action:
 - service: logbook.log
   data:
     name: 'Z-Wave JS'
-    message: 'received event: {{ command_class_name }} - {{ value }} - {{ label }}'
+    message: "received event: {{ command_class_name }} - {{ value }} - {{ label }} - {{ property_key_name }}"
 - choose:
   - conditions: '{{ property_key_name == ''001'' and value == ''KeyPressed'' }}'
     sequence: !input 'scene_1'
